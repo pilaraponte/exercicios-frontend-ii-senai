@@ -14,6 +14,25 @@ const PaginaInicial = () => {
       >
         Lista Produtos
       </BotaoCustomizado>
+      <BotaoCustomizado
+        cor="secundaria"
+        aoClicar={() => navigate('/botao-contador')}
+      >
+        Botão Contador
+      </BotaoCustomizado>      
+      <BotaoCustomizado
+        cor="primaria"
+        aoClicar={() => navigate('/botao-incremenar-decrementar')}
+      >
+        Botão Incrementar Decrementar
+      </BotaoCustomizado>     
+      <BotaoCustomizado
+        cor="secundaria"
+        aoClicar={() => navigate('/lista-tarefas')}
+      >
+        Lista de Tarefas
+      </BotaoCustomizado>   
+
     </Principal>
   );
 };
