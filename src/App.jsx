@@ -1,37 +1,34 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
-import './App.css';
-import Cabecalho from './comum/componentes/cabecalho/Cabecalho';
-import Rodape from './comum/componentes/rodape/Rodape';
-import PaginaInicial from './paginas/PaginaInicial/PaginaInicial';
-import ListaProdutos from './paginas/ListaProdutos/ListaProdutos';
-import BotaoContador from './paginas/BotaoContador/BotaoContador';
-import BotaoIncrementarDecrementar from './paginas/BotaoIncrementarDecrementar/BotaoIncrementarDecrementar';
-import PaginaListaTarefas from './paginas/PaginaListaTarefas/PaginaListaTarefas';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./App.css";
+import Cabecalho from "./comum/componentes/cabecalho/Cabecalho";
+import Rodape from "./comum/componentes/rodape/Rodape";
+import PaginaInicial from "./paginas/PaginaInicial/PaginaInicial";
+import ListaProdutos from "./paginas/ListaProdutos/ListaProdutos";
+import BotaoContador from "./paginas/BotaoContador/BotaoContador";
+import BotaoIncrementarDecrementar from "./paginas/BotaoIncrementarDecrementar/BotaoIncrementarDecrementar";
+import PaginaListaTarefas from "./paginas/PaginaListaTarefas/PaginaListaTarefas";
 
 const router = createBrowserRouter([
   {
-    path: '',
+    path: "",
     element: <PaginaInicial />,
   },
   {
-    path: 'lista-produtos',
+    path: "lista-produtos",
     element: <ListaProdutos />,
   },
   {
-    path: 'botao-contador',
+    path: "botao-contador",
     element: <BotaoContador />,
   },
   {
-    path: '/botao-incremenar-decrementar',
+    path: "/botao-incremenar-decrementar",
     element: <BotaoIncrementarDecrementar />,
   },
   {
-    path: '/lista-tarefas',
+    path: "/lista-tarefas",
     element: <PaginaListaTarefas />,
-  }
+  },
 ]);
 
 function App() {
