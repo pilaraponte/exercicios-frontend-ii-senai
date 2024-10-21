@@ -7,7 +7,7 @@ const PaginaInicial = () => {
   const navigate = useNavigate();
 
   return (
-    <Principal titulo="Página Inicial">
+    <Principal titulo="Lista de Exercícios II - ReactJS">
       <BotaoCustomizado
         cor="secundaria"
         aoClicar={() => navigate("/botao-contador")}
@@ -21,17 +21,18 @@ const PaginaInicial = () => {
         Botão Incrementar Decrementar
       </BotaoCustomizado>
       <BotaoCustomizado
-        cor="primaria"
-        aoClicar={() => navigate("/lista-produtos")}
+        cor="secundaria"
+        aoClicar={() => navigate("/botao-somar")}
       >
-        Lista Produtos
+       Botão Somar
       </BotaoCustomizado>
       <BotaoCustomizado
-        cor="secundaria"
-        aoClicar={() => navigate("/lista-tarefas")}
+        cor="primaria"
+        aoClicar={() => navigate("/botao-diminuir")}
       >
-        Lista de Tarefas
+        Botão Diminuir
       </BotaoCustomizado>
+
     </Principal>
   );
 };

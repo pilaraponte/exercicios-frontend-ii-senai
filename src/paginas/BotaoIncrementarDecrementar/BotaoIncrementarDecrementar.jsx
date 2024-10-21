@@ -15,14 +15,22 @@ const BotaoIncrementarDecrementar = () => {
 
   return (
     <div>
-      <Principal titulo="Botão Incrementador e Decrementador" voltarPara="/">
+      <Principal
+        titulo="Botão Incrementador e Decrementador"
+        voltarPara="/"
+        questao="2. Crie um componente chamado Botão Incrementador e Decrementador que contém dois botões, um para somar 1 ao ser clicado e outro para diminuir 1 ao ser clicado, e mostre o valor atual no meio entre os dois botões:"
+        >
+        <div>
         <BotaoCustomizado aoClicar={decrementar} cor="primaria">
           Menos Um
         </BotaoCustomizado>
-        <h1>O número é: {numero}</h1>
+        </div>
+        <Principal questao={`O número é: ${numero}`} />
+        <div>
         <BotaoCustomizado aoClicar={incrementar} cor="secundaria">
           Mais Um
         </BotaoCustomizado>
+        </div>
       </Principal>
     </div>
   );

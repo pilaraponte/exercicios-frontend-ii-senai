@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Principal.css";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 
-function Principal({ voltarPara, titulo, children }) {
+function Principal({ voltarPara, titulo, children, questao }) {
   return (
     <main className="principal_root">
       {voltarPara && (
@@ -12,6 +12,8 @@ function Principal({ voltarPara, titulo, children }) {
       )}
 
       <h1>{titulo}</h1>
+
+      <h3>{questao}</h3>
 
       {children}
     </main>
