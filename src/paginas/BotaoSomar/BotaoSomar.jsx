@@ -6,6 +6,7 @@ import { FaEquals } from "react-icons/fa6";
 
 
 const BotaoSomar = () => {
+    
     const [numeroUm, setNumeroUm] = useState("");
     const [numeroDois, setNumeroDois] = useState("");
     const [resultado, setResultado] = useState(0);

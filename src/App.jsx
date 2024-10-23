@@ -5,7 +5,7 @@ import Rodape from "./comum/componentes/rodape/Rodape";
 import PaginaInicial from "./paginas/PaginaInicial/PaginaInicial";
 import BotaoContador from "./paginas/BotaoContador/BotaoContador";
 import BotaoIncrementarDecrementar from "./paginas/BotaoIncrementarDecrementar/BotaoIncrementarDecrementar";
-import BotaoSomar from "./paginas/BotãoSomar/BotãoSomar";
+import BotaoSomar from "./paginas/BotaoSomar/BotaoSomar";
 import BotaoDiminuir from "./paginas/BotaoDiminuir/BotaoDiminuir";
 
 
@@ -23,10 +23,12 @@ const router = createBrowserRouter([
     path: "/botao-incremenar-decrementar",
     element: <BotaoIncrementarDecrementar />,
   },
+  
   {
     path: "/botao-somar",
-    element: <BotaoSomar />,
+    element: <BotaoSomar/>,
   },
+
   {
     path: "/botao-diminuir",
     element: <BotaoDiminuir />,
