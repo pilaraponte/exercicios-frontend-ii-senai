@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import Principal from "../../comum/componentes/Principal/Principal";
-import BotaoCustomizado from "../../comum/componentes/BotaoCustomizado/BotaoCustomizado";
+import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
 import { FaPlus } from "react-icons/fa6";
-import { FaEquals } from "react-icons/fa6";
+import Principal from "../Principal/Principal";
 
-
-const BotaoSomar = () => {
+const Somar = () => {
     
     const [numeroUm, setNumeroUm] = useState("");
     const [numeroDois, setNumeroDois] = useState("");
     const [resultado, setResultado] = useState(0);
 
-    const somar = () => {
+    const soma = () => {
         setResultado(Number(numeroUm) + Number(numeroDois));
         setResultado(+numeroUm + +numeroDois);
     }
@@ -19,9 +17,7 @@ const BotaoSomar = () => {
     return (
         <div>
             <Principal
-            titulo="Botão Somar" 
-            voltarPara="/"
-            questao="3. Crie um componente chamado Contador que contém dois botões, um para somar 1 ao ser clicado e outro para diminuir 1 ao ser clicado, e mostre o valor atual no meio entre os dois botões:">
+             questao="3. Crie um componente chamado Contador que contém dois botões, um para somar 1 ao ser clicado e outro para diminuir 1 ao ser clicado, e mostre o valor atual no meio entre os dois botões:">
             <div>
             <input 
             style={{ width: "100px"}}
@@ -34,17 +30,17 @@ const BotaoSomar = () => {
             placeholder="Número Dois"
             value={numeroDois}
             onChange={(e) => setNumeroDois(e.target.value)}/>   <BotaoCustomizado
-            aoClicar={somar} cor="primaria"
+            aoClicar={soma} cor="primaria"
             onkeyUp={(e) =>{
                 if (e.key === "Enter") {
-                    somar();
+                    soma();
                 }
             }}>
-             <FaEquals />
+            Somar
             </BotaoCustomizado>  {resultado} 
             </div>
             </Principal>
         </div>
 )}
 
-export default BotaoSomar;
+export default Somar;

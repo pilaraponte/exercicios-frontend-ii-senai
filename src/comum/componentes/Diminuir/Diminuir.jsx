@@ -1,26 +1,24 @@
 import React, { useState } from "react";
-import Principal from "../../comum/componentes/Principal/Principal";
+import Principal from "../Principal/Principal";
 import { FaMinus } from "react-icons/fa6";
-import BotaoCustomizado from "../../comum/componentes/BotaoCustomizado/BotaoCustomizado";
+import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
 import { FaEquals } from "react-icons/fa6";
 
 
 
-const BotaoDiminuir = () => {
+const Diminuir = () => {
   const [numeroUm, setNumeroUm] = useState("");
   const [numeroDois, setNumeroDois] = useState("");
   const [resultado, setResultado] = useState(0);
 
-  const diminuir = () =>{
+  const diminui = () =>{
     setResultado(Number(numeroUm) - Number(numeroDois));
     setResultado(+numeroUm- +numeroDois);
   }
 
   return (
     <Principal
-      titulo="Botão Diminuir"
-      voltarPara="/"
-      questao="4. Crie um componente chamado Diminuir que contém dois campos tipo numérico, e um botão Diminuir que ao ser clicado deve diminuir os dois valores e mostrar o resultado: ">
+     questao="4. Crie um componente chamado Diminuir que contém dois campos tipo numérico, e um botão Diminuir que ao ser clicado deve diminuir os dois valores e mostrar o resultado: ">
     <div>
     <input 
     style={{width: "100px"}}
@@ -33,13 +31,13 @@ const BotaoDiminuir = () => {
     placeholder="Número Dois"
     value={numeroDois}
     onChange={(e) => setNumeroDois(e.target.value)}/>   <BotaoCustomizado
-    aoClicar={diminuir} cor="secundaria"
+    aoClicar={diminui} cor="secundaria"
     onKeyUp={(e) => {
         if (e.key === "ENter"){
-            diminuir();
+            diminui();
         }
     }} >
-    <FaEquals />
+    Diminuir
     </BotaoCustomizado>  {resultado}
 
     </div>
@@ -47,4 +45,4 @@ const BotaoDiminuir = () => {
   );
 };
 
-export default BotaoDiminuir;
+export default Diminuir;

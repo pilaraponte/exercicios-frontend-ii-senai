@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import BotaoCustomizado from "../../comum/componentes/BotaoCustomizado/BotaoCustomizado";
-import Principal from "../../comum/componentes/Principal/Principal";
+import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
+import Principal from "../Principal/Principal";
 
-const BotaoIncrementarDecrementar = () => {
+const Contador = () => {
   const [numero, setNumero] = useState(0);
 
   const incrementar = () => {
@@ -16,8 +16,6 @@ const BotaoIncrementarDecrementar = () => {
   return (
     <div>
       <Principal
-        titulo="Botão Incrementador e Decrementador"
-        voltarPara="/"
         questao="2. Crie um componente chamado Botão Incrementador e Decrementador que contém dois botões, um para somar 1 ao ser clicado e outro para diminuir 1 ao ser clicado, e mostre o valor atual no meio entre os dois botões:"
         >
         <div>
@@ -36,4 +34,4 @@ const BotaoIncrementarDecrementar = () => {
   );
 };
 
-export default BotaoIncrementarDecrementar;
+export default Contador;
